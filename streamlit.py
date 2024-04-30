@@ -6,21 +6,21 @@ import pandas as pd
 pickle_in = open("OOPmodel4.pkl", 'rb')
 model = pickle.load(pickle_in)
 
-def make_dataframe(data_arr, columns):
-    dictionary = {
-        'CreditScore': 0.0, 'Geography': 0, 'Gender': 0, 'Age': 0.0, 'Tenure': 0, 'Balance': 0.0,
-       'NumOfProducts': 0, 'HasCrCard': 0, 'IsActiveMember': 0, 'EstimatedSalary': 0.0
-    }
+#def make_dataframe(data_arr, columns):
+    #dictionary = {
+        #'CreditScore': 0.0, 'Geography': 0, 'Gender': 0, 'Age': 0.0, 'Tenure': 0, 'Balance': 0.0,
+       #'NumOfProducts': 0, 'HasCrCard': 0, 'IsActiveMember': 0, 'EstimatedSalary': 0.0
+    #}
     
-    for i, val in enumerate(data_arr) :
-        dictionary[columns[i]] = val
+    #for i, val in enumerate(data_arr) :
+       # dictionary[columns[i]] = val
 
-    df = pd.DataFrame(dictionary, index=[0])
-    return df
+    #df = pd.DataFrame(dictionary, index=[0])
+    #return df
 
-def make_prediction(data):
-    prediction = model.predict(data)
-    return prediction
+#def make_prediction(data):
+    #prediction = model.predict(data)
+    #return prediction
 
 def main():
     #st.title(':red[Customer Churn Prediction]')
